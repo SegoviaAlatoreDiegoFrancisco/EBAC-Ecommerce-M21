@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="js/scripts.js" defer></script>
+    <title>Tienda Adidas</title>
+</head>
+<body>
+    <header class="header" id="inicio">
+        <button class="header__icon--menu" type="button" aria-label="Abrir menú" aria-controls="side-menu" aria-expanded="false">
+            <img class="header__icon-image" src="./img/menu.png" alt="Icono Menu">
+        </button>
+        <img class="header__logo" src="./img/Adidas-Logo.png" alt="Logo Adidas">
+        <button class="header__icon--cart" type="button" aria-label="Abrir carrito" aria-controls="shopping-cart"  aria-expanded="false">
+            <img class="header__icon-image" src="./img/shopping-cart_1018285.png" alt="Icono de Carrito">
+            <span class="header__cart-count">0</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h2 class="banner__title">Productos Nuevos</h2>
+            <p class="banner__text">Conoce nuestros productos nuevos</p>
+        </section>
+
+        <section class="products" id="products">
+            <article class="product-card product-card--discount" data-product-id="jersey-fan-2023">
+                <img class="product-card__image" src="./img/jersey.png" alt="Jersey Fan de 2023">
+                <h3 class="product-card__title">Jersey Fan 2023</h3>
+                <p class="product-card__price">$1,000.00</p>
+                <button class="product-card__addProduct" type="button">Agregar al Carrito</button>
+            </article>
+            <article class="product-card product-card--discount" data-product-id="chamarra-xxl">
+                <img class="product-card__image" src="./img/21a3f1e5-52a7-4335-83fc-4457a5c76229.jpg" alt="Chamarra Adidas XXL">
+                <h3 class="product-card__title">Chamarra Adidas XXL</h3>
+                <p class="product-card__price">$2,000.00</p>
+                <button class="product-card__addProduct" type="button">Agregar al Carrito</button>
+            </article>
+            <article class="product-card product-card--out-stock" data-product-id="adidas-lg2-agotado">
+                <img class="product-card__image" src="./img/f8c6b24a-1685-4e04-a8b8-3fd2ee3a469c.jpg" alt="Imagen de tenis">
+                <h3 class="product-card__title">Adidas LG2</h3>
+                <p class="product-card__price">$2,300.00</p>
+                <button class="product-card__addProduct" type="button" disabled>Agregar al Carrito</button>
+            </article>
+            <article class="product-card" data-product-id="jersey-2023">
+                <img class="product-card__image" src="./img/jersey.png" alt="Jersey de 2023">
+                <h3 class="product-card__title">Jersey 2023</h3>
+                <p class="product-card__price">$1,000.00</p>
+                <button class="product-card__addProduct" type="button">Agregar al Carrito</button>
+            </article>
+            <article class="product-card" data-product-id="chamarra-adidas">
+                <img class="product-card__image" src="./img/21a3f1e5-52a7-4335-83fc-4457a5c76229.jpg" alt="Chamarra Adidas">
+                <h3 class="product-card__title">Chamarra Adidas</h3>
+                <p class="product-card__price">$2,000.00</p>
+                <button class="product-card__addProduct" type="button">Agregar al Carrito</button>
+            </article>
+            <article class="product-card" data-product-id="adidas-lg2">
+                <img class="product-card__image" src="./img/f8c6b24a-1685-4e04-a8b8-3fd2ee3a469c.jpg" alt="Imagen de tenis">
+                <h3 class="product-card__title">Adidas LG2</h3>
+                <p class="product-card__price">$2,300.00</p>
+                <button class="product-card__addProduct" type="button">Agregar al Carrito</button>
+            </article>
+            <article class="product-card"data-product-id="jersey-2023-repetida">
+                <img class="product-card__image" src="./img/jersey.png" alt="Jersey de 2023">
+                <h3 class="product-card__title">Jersey 2023</h3>
+                <p class="product-card__price">$1,000.00</p>
+                <button class="product-card__addProduct" type="button">Agregar al Carrito</button>
+            </article>
+            <article class="product-card" data-product-id="chamarra-adidas-repetida">
+                <img class="product-card__image" src="./img/21a3f1e5-52a7-4335-83fc-4457a5c76229.jpg" alt="Chamarra Adidas">
+                <h3 class="product-card__title">Chamarra Adidas</h3>
+                <p class="product-card__price">$2,000.00</p>
+                <button class="product-card__addProduct" type="button">Agregar al Carrito</button>
+            </article>
+            <article class="product-card"data-product-id="adidas-lg2-repetido">
+                <img class="product-card__image" src="./img/f8c6b24a-1685-4e04-a8b8-3fd2ee3a469c.jpg" alt="Imagen de tenis">
+                <h3 class="product-card__title">Adidas LG2</h3>
+                <p class="product-card__price">$2,300.00</p>
+                <button class="product-card__addProduct" type="button">Agregar al Carrito</button>
+            </article>
+        </section>
+        
+    <!--
+        //-----------|seccion de carrito|----------------
+        -->
+    <aside class="cart" id="shopping-cart" aria-labelledby="cart__title" aria-hidden="true" inert>
+        <div class="cart__header">
+            <h2 class="cart__title" id ="cart__title">Carrito</h2>
+            <button class="cart__close" type="button">X</button>
+        </div>
+        <div class="cart__items" id="cart-items"></div>
+        <p class="cart__total" id="cart__total">Total: <span>$0.00</span></p>
+        <button class="cart__buy" type="button">Comprar ahora</button>
+    </aside>
+    <!--
+        //-----------|seccion de menu|----------------
+        -->
+        <aside class="menu" id="side-menu" aria-labelledby="menu__title" aria-hidden="true" inert>
+            <div class="menu__header">
+                <h2 class="menu__title" id="menu-title">Menu</h2>
+                <button class="menu__close" type="button">X</button>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="#inicio">Inicio</a></li>
+                <li class="menu__item"><a class="menu__link" href="#products">Productos</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Nosotros</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Contacto</a></li>
+            </ul>
+
+        </aside>
+    </main>
+</body>
+</html>
