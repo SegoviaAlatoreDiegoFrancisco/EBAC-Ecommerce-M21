@@ -121,6 +121,7 @@ function setPanelOpen(panel, button, openClass, isOpen){
     panel.inert = !isOpen;
     button.setAttribute("aria-expanded", String(isOpen));
 }
+
 //------------|Abre el menú ó carrito y los alterna
 function openPanel(panel, button, openClass){
     const isOpen = !panel.classList.contains(openClass);
@@ -132,6 +133,7 @@ function openPanel(panel, button, openClass){
 
     setPanelOpen(panel,button,openClass,isOpen);
 }
+
 //----------|Se recorre cada tarjeta definida con .product-card en el HTML y se obtiene nombre, imagen, precio (casteado) e id del producto
 document.querySelectorAll(".product-card").forEach(productCard=> {
     const addButton = productCard.querySelector(".product-card__addProduct");
